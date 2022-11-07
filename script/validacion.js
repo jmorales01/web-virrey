@@ -106,3 +106,18 @@ export function validarText(text, input){
         input.classList.add("is-invalid");
     }
 }
+
+
+export function validarNamber(text, input){
+    let expReg = /([0-9]{1,10})$/;
+    // Minusculas, mayusculas y numeros
+
+    if (expReg.test(text) == true) {
+        input.classList.add("is-valid");
+    }else{
+        input.classList.add("is-invalid");
+    }
+}
+
+
+

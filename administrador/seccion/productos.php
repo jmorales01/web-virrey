@@ -14,6 +14,7 @@
 // Recepcionando y validando el formulario
 $txtID = (int)(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
 $txtNombre = (isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
+$txtCategoria = (isset($_POST['txtCategoria'])) ? $_POST['txtCategoria'] : "";
 $txtAutor = (isset($_POST['txtAutor'])) ? $_POST['txtAutor'] : "";
 $txtEditorial = (isset($_POST['txtEditorial'])) ? $_POST['txtEditorial'] : "";
 $txtStock = (int)(isset($_POST['txtStock'])) ? $_POST['txtStock'] : "";
@@ -32,12 +33,13 @@ include("../config/bd.php");
 switch ($accion) {
     case 'agregar':
 
-        $sentenciaSQL = $conexion->prepare("INSERT INTO libro(nombre, idAutor, idEditorial, stock, precio, descuento, idDescripcion, imagen) 
+        $sentenciaSQL = $conexion->prepare("INSERT INTO libro(nombre, categoria, idAutor, idEditorial, stock, precio, descuento, idDescripcion, imagen) 
         VALUES 
-        (:nombre,:autor,:editorial,:stock,:precio,:descuento,:descripcion,:imagen);");
+        (:nombre, :categoria :autor,:editorial,:stock,:precio,:descuento,:descripcion,:imagen);");
 
         // $sentenciaSQL->bindParam(':id', $txtID);
         $sentenciaSQL->bindParam(':nombre', $txtNombre);
+        $sentenciaSQL->bindParam(':categoria', $txtCategoria);
         $sentenciaSQL->bindParam(':autor', $txtAutor);
         $sentenciaSQL->bindParam(':editorial', $txtEditorial);
         $sentenciaSQL->bindParam(':stock', $txtStock);
@@ -126,6 +128,7 @@ switch ($accion) {
 
         $txtID = $libroSelect['idLibro'];
         $txtNombre = $libroSelect['nombre'];
+        $txtCategoria = $libroSelect['categoria'];
         $txtAutor = $libroSelect['idAutor'];
         $txtEditorial = $libroSelect['idEditorial'];
         $txtStock = $libroSelect['stock'];
@@ -159,10 +162,6 @@ switch ($accion) {
         // Redireccionar a productos para que se limpie los inputs
         header("Location:productos.php");
 
-        break;
-
-    default:
-        echo "No preciono nada";
         break;
 }
 
@@ -229,9 +228,9 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <div class="clearfix"></div>
                     <div class="btn-group" role="group" aria-label="">
-                        <button type="submit" name="accion" <?php echo ($accion == "select") ? "disabled" : ""; ?> value="agregar" class="btn btn-secondary" >Agregar</button>
-                        <button type="submit" name="accion" <?php echo ($accion != "select") ? "disabled" : ""; ?> value="modificar" class="btn btn-primary">Modificar</button>
-                        <button type="submit" name="accion" <?php echo ($accion != "select") ? "disabled" : ""; ?> value="cancelar" class="btn btn-danger">Cancelar</button>
+                        <button type="submit" id="btnAgregar" name="accion" <?php echo ($accion == "select") ? "disabled" : ""; ?> value="agregar" class="btn btn-secondary">Agregar</button>
+                        <button type="submit" id="btnModificar" name="accion" <?php echo ($accion != "select") ? "disabled" : ""; ?> value="modificar" class="btn btn-primary">Modificar</button>
+                        <button type="submit" id="btnCancelar" name="accion" <?php echo ($accion != "select") ? "disabled" : ""; ?> value="cancelar" class="btn btn-danger">Cancelar</button>
                     </div>
                 </form>
             </div>
@@ -239,10 +238,35 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-        <div class="col-md-12">
-            <table class="table" id="table">
+        <div class="col-md-12 tableDatos">
+
+            <div class="row tableDatosSearch">
+                <div class="col-md-4">
+                    <label for="">Buscar po ID :</label>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <label for="">Buscar po Nombre :</label>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <label for="">Buscar po Precio :</label>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <table id="example" class="table table-striped" style="width:100%">
                 <thead>
-                    <tr>
+                    <tr class="table-warning">
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Estock</th>
@@ -289,6 +313,12 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- link a css y js -->
 <link rel="stylesheet" href="../style/productos.css">
+<script src="../../script/productos.js" type="module"></script>
+
+<!-- link a la database con jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
 
 

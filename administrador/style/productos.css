@@ -83,6 +83,10 @@
 
 
 
-#table{
+.tableDatos{
     margin-top: 100px;
+}
+
+.tableDatosSearch{
+    margin-bottom: 20px;
 }
