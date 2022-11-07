@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #F4F6F8;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+main{
+    margin-top: 100px;
+}
+
+.registrar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+}
+
+.imgVirrey{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    padding: 10px 30px 10px 30px;
+    background-color: #f0cd8e;
+    align-items: center;
+}
+
+.imgVirrey img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.formularioRegistro{
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+}
+
+
+.formularioRegistro form{
+	width:100%;
+    height: 100%;
+    padding: 10px 30px;
+	background-color: #fff;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.tituloFormulario{
+    text-align: center;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.formularioRegistro form label{
+	width:100%;
+	font-weight:bold;
+	display:inline-block;
+}
+
+
+form button{
+	width:50%;
+    height: 40px;
+	border:1px solid #000;      
+	border-radius:5px;
+	display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;      
+    background-color: rgb(97, 27, 27);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+} 
+
+form button:hover{
+	cursor:pointer;
+    background: rgb(182, 0, 0);
+}
+
+
+
+

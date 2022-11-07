@@ -1,0 +1,107 @@
+/* VARIABLES DEFINIDAS CON LOS RECURSOS */
+:root {
+    --primary-color: #F4F6F8;
+    --secundary-color: #efe6dd;
+    --orange-color: #F89C37;
+    --brow-color: #331803;
+    --font-size: 1.8rem;
+    --font-family: 'Abyssinica SIL', serif;
+    --nombre-variable: atributo;
+}
+
+
+
+/* Formato de main */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #f4f6f8;
+}
+
+.perfilNombres{
+    display: flex;
+    justify-content: center;
+}
+
+.imgUser i{
+    font-size: 60px;
+    text-align: center;
+    padding: 10%;
+}
+
+.tituloNombre{
+    font-size: 20px;
+    font-weight: 900;
+    color: #8b8b8b;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+
+.tituloApellido{
+    font-size: 17px;
+    font-weight: 900;
+    color: #8b8b8b;
+    letter-spacing: 1px;
+}
+
+.editText {
+    text-align: right;
+    font-size: 18px;
+}
+
+.row h3{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.infoPersonal label{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.infoPersonal input{
+    font-size: 14px;
+    font-style: oblique;
+    border: none;
+}
+
+.linkCambiar{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.pedidosRecientes h5{
+    font-size: 20px;
+    color: #fff;
+}
+
+.pedidosRecientes small{
+    font-size: 12px;
+    color: #fff;
+    font-style: oblique;
+}
+
+.pedidosRecientes label{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.pedidosRecientes input{
+    font-size: 12px;
+    background-color: #fff;
+    text-align: center;
+    border: none;
+}
+
+
+
+
+
+

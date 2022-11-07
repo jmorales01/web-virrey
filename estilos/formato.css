@@ -1,0 +1,361 @@
+
+/* VARIABLES DEFINIDAS CON LOS RECURSOS */
+:root{
+    --white-black: #F4F6F8;
+    --secundary-color: #efe6dd;
+    --orange-color: #F89C37;
+    --brow-color: #331803;
+    --red-black: #900C3F;
+    --red-color: #C70039;
+    --font-size: 1.8rem;
+    --font-family: 'Abyssinica SIL', serif;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: var(--white-black);
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: auto;
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+}
+
+
+
+/**
+ * La barra de navegacion de las paginas webs
+ * donde estara el logo, el buscador,
+ * el login, el carrito
+ */
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.search-nav{
+    width: 100%;
+    height: 7rem;
+    background-color: var(--secundary-color);
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.search-nav .panel{
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+/* Logo de la empresa */
+.icon{
+    width: 25%;
+    padding-left: 3rem;
+}
+
+.icon img{
+    width: 70%;
+}
+
+/* Buscador */
+.search{
+    height: 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.search div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.buscar input{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+
+.buscar a{
+    width: 10%;
+}
+
+.search button{
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--brow-color);
+    color: #fff;
+}
+
+.search button i{
+    font-size: 3rem;
+    padding: 2px;
+    color: #fff;
+}
+
+/* Botones mapas, carrito y login */
+.shop{
+    width: 25%;
+    text-align: right;
+    margin-right: 3rem;
+}
+
+.shop button{
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    margin: 0 4%;
+}
+
+.shop button i{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.shop button i:hover{
+    color: var(--orange-color);
+}
+
+
+/**
+ * Menu de opciones para la busqueda rapida
+ * materias etc..
+ */
+
+nav .categoria{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--brow-color);
+}
+
+nav .categoria li{
+    list-style: none;
+}
+
+.categoria li a{
+    position: relative;
+    text-decoration: none;
+    margin: 0 4rem;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+
+@media (max-width: 850px){
+ 
+    .search{
+        height: 3rem;
+    }
+
+    .search button i{
+        font-size: 2rem;
+        padding: 1px;
+    }
+
+    .shop button i{
+        font-size: 2rem;
+    }
+
+    nav .categoria{
+        display: flex;
+        flex-direction: column;
+        height: 15rem;
+    }
+
+    nav .categoria li{
+        margin-bottom: .5rem;
+    }
+
+    .categoria li a{
+        font-size: 1.4rem;
+    }
+ }
+
+
+
+
+
+
+
+/**
+ * Diseño del footer con 5 bloques
+ * y sus imagenes
+ */
+
+ footer{
+    background-color: var(--secundary-color);
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    margin-top: auto;
+ }
+
+ .bloque{
+    display: inline-block;
+    margin: 20px 30px;
+    vertical-align: top;
+    padding: 10px;
+ }
+
+ .title_footer{
+    color: #000;
+    font-weight: 600;
+    margin: 10px 0;
+ }
+
+ .title_footer p{
+    font-size: 1.4rem;
+ }
+
+ footer a{
+    font-size: 15px;
+    font-style: italic;
+ }
+
+/* logo de la empresa */
+ .images_logo{
+    height: 40px;
+    width: 150px;
+ }
+
+ .images_logo a img{
+    height: 100%;
+ }
+
+/* Primer bloque */
+.redes_sociales{
+    display: flex;
+    justify-content: center;
+}
+
+.redes_sociales li{
+    margin: 5px 10px;
+    list-style: none;
+}
+
+.redes_sociales li a{
+    list-style: none;
+}
+
+.redes_sociales li a span i{
+    font-size: 3rem;
+    color: #000;
+}
+
+/* segundo bloque */
+.sobre_nosotros{
+    padding-bottom: 10px;
+}
+
+.quienes_somos{
+    text-align: left;
+}
+
+.quienes_somos li{
+    list-style: none;
+    padding: 5px 0px;
+}
+
+.icon_medio_pago{
+    display: flex;
+    justify-content: center;
+}
+
+.icon_medio_pago li{
+    margin: 5px;
+    list-style: none;
+}
+
+.icon_medio_pago li a span i{
+    font-size: 25px;
+    color: #000;
+}
+
+/* tercer bloque */
+.politicas{
+    text-align: left;
+}
+
+.politicas li{
+    list-style: none;
+    padding: 5px 0px;
+}
+
+/* cuarto bloque */
+.contactos{
+    text-align: left;
+}
+
+.contactos li{
+    list-style: none;
+    padding: 5px 0px;
+}
+
+/* quinto bloque */
+.pedidos{
+    text-align: left;
+}
+
+.pedidos li{
+    list-style: none;
+    padding: 5px 0px;
+}
+
+
+/**
+ * Derechos de autor y de imagen
+ */
+
+ .derechos_reservados{
+    margin-top: 5rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+.derechos_reservados_contenedor{
+    padding: 10px 0px;
+    
+}
+
+.derechos_reservados_contenedor p{
+    font-size: 1.5rem;
+}
+
+
+
+
+

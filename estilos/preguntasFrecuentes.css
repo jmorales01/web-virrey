@@ -1,0 +1,127 @@
+
+
+
+/**
+ * Diseño del main body de las preguntas 
+ * frecuentes
+ */
+
+
+.contenedor{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.title_questions{
+    font-size: 18px;
+    text-align: center;
+}
+
+.title_questions{
+    color: #331803;
+}
+
+.conteiner_body_questions{
+    margin: 20px 20%;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background-color: #ffff;
+}
+
+.questions_conteiner{
+    width: 100%;
+}
+
+.question{
+    margin: 10px 0px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.question p{
+    font-size: 18px;
+    font-weight: bold;
+    width: 90%;
+}
+
+.question span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+    border-color: #331803;
+}
+
+.question span:hover{
+    border-color: orange;
+    color: orange;
+    cursor: pointer;
+}
+
+.response{
+    padding: 0px 10px;
+    transition: 0.7s;
+    height: 0px;
+    overflow: hidden;
+}
+
+.no{
+    padding: 0px 10px;
+    transition: 0.3s;
+    height: 100%;
+}
+
+
+
+
+.line_question{
+    background-color: #000;
+    height: 1px;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+/* Ingresar una pregunta*/
+
+.question_enter{
+    margin: 30px 20%;
+    height: 100px;
+    background-color: #ffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question_enter p{
+    font-size: 18px;
+    font-style: italic;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question_enter input{
+    width: 50%;
+    height: 50%;
+}
+
+.question_enter button{
+    margin: 0px 5%;
+    width: 80px;
+    height: 40px;
+    background-color: #331803;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+
+
+

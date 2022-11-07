@@ -1,0 +1,103 @@
+
+/* VARIABLES DEFINIDAS CON LOS RECURSOS */
+:root{
+    --primary-color: #F4F6F8;
+    --secundary-color: #efe6dd;
+    --orange-color: #F89C37;
+    --brow-color: #331803;
+    --font-size: 1.8rem;
+    --font-family: 'Abyssinica SIL', serif;
+    --nombre-variable: atributo;
+}
+
+
+
+
+
+/* ########### MAIN ########### */
+main{
+    margin: 8rem 0;
+}
+
+.ubicaciones{
+    background-color: #fff;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border: solid 0.5px black;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.descripcion_ubicaciones{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    border: solid 0.1px black;
+}
+
+.descripcion_local{
+    width: 50%;
+    padding: 3rem 0 0 3rem;
+}
+
+.descripcion_local p{
+    font-size: 1.8rem;
+}
+
+.descripcion_local h3{
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 2rem;
+}
+
+.local_image{
+    margin: auto 0;
+    width: 40%;
+    padding: 0 2rem 0 0;
+}
+
+.local_image picture img {
+    width: 100%;
+    box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.nombre_local{
+    width: 100%;
+}
+
+.nombre_local h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.map{
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    border: solid 0.1px black;
+    display: flex;
+}
+
+.map_img{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+

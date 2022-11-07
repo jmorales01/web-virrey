@@ -1,0 +1,264 @@
+/* VARIABLES DEFINIDAS CON LOS RECURSOS */
+:root {
+    --primary-color: #F4F6F8;
+    --secundary-color: #efe6dd;
+    --orange-color: #F89C37;
+    --brow-color: #331803;
+    --font-size: 1.8rem;
+    --font-family: 'Abyssinica SIL', serif;
+    --nombre-variable: atributo;
+}
+
+
+
+
+
+
+/* ########## MAIN ########## */
+
+/* Formato de main */
+main{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    margin: 8rem auto;
+}
+
+/* Columna de recomendados */
+.recomendados{
+    display: block;
+    width: 20%;
+    padding: 30px;
+}
+
+.recomendados_title{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.slick{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    padding: 1rem;
+    margin-top: 2rem;
+    float: left;
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    background-color: #ffff;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.slick div a{
+    text-decoration: none;
+}
+
+/* images */
+.slick a img{
+    object-fit: cover;
+    height: 150px;
+    width: 80%;
+    margin: 0 10%;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+}
+.slick a img:hover{
+    opacity: .85;
+}
+
+/* informacion del libro */
+.info_libro{
+    width: 100%;
+    height: 100px;
+}
+
+.info_libro div{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.info_libro_autor{
+    font-size: 1.1rem;
+    height: 10px;
+    width: 100%;
+    opacity: 50%;
+}
+
+.info-libro_titulo{
+    font-size: 1.3rem;
+    color: #000;
+    width: 100%;
+    
+}
+
+.info_libro_precio{
+    text-align: center;
+    margin: 10px 0px;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info_libro_precio span{
+    font-size: 18px;
+}
+
+/* columna descripcion del libro */
+.conteiner_libro{
+    width: 75%;
+}
+
+.encabezadoLibro{
+    width: 100%;
+    text-align: left;
+}
+
+.encabezadoLibro .tituloLibro{
+    font-size: 3rem;
+    font-style: bold;
+}
+
+.encabezadoLibro .autorLibro{
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.cuerpoLibro{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portadaLibro{
+    width: 30%;
+}
+
+.portadaLibro img{
+    width: 100%;
+}
+
+.descripcionLibro{
+    display: block;
+    width: 65%;
+}
+
+.descripcionLibro .resumen{
+    display: block;
+    width: 70%;
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+.descripcionLibro .datosLibro{
+    display: block;
+    width: 70%;
+    margin: 20px;
+    font-size: 2em;
+    text-align: justify;
+}
+
+.descripcionLibro .estrellas{
+    display: block;
+    width: 70%;
+    margin: 20px;
+    font-size: 3.5em;
+    text-align: justify;
+}
+
+
+/* Comentarios de los libros */
+
+.conteiner_comentarios{
+    width: 100%;
+}
+
+.comentarios_title{
+    display: inline-block;
+    width: 40%;
+    font-size: 3.5em;
+    text-align: left;
+}
+
+.coment_user{
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.coment_user textarea{
+    width: 80%;
+    font-size: 1.8rem;
+}
+
+.coment_user input{
+    width: 8rem;
+    height: 3rem;
+    font-size: 2em;
+    font-weight: bolder;
+    background-color: brown;
+    color: #fff;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+.comentario{
+    margin: 3rem 0 2rem 0;
+}
+.user_comentario{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.imagen_user img{
+    width: 7rem;
+    height: 7rem;
+    margin: 0 2rem;
+    border: solid 1px black;
+}
+
+.datos_user{
+    display: block;
+    margin: auto 0;
+}
+
+.datos_user div{
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.datos_user .nombre{
+    font-weight: bold;
+}
+
+
+.comentario_user{
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.calificacion{
+    width: 100%;
+}
+
+.calificacion p{
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+.comentario_text p{
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.line{
+    height: 1px;
+    background-color: #000;
+    width: 100%;
+}
+

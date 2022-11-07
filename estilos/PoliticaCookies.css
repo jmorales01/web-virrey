@@ -1,0 +1,64 @@
+
+/* VARIABLES DEFINIDAS CON LOS RECURSOS */
+:root{
+    --primary-color: #F4F6F8;
+    --secundary-color: #efe6dd;
+    --orange-color: #F89C37;
+    --brow-color: #331803;
+    --font-size: 1.8rem;
+    --font-family: 'Abyssinica SIL', serif;
+    --nombre-variable: atributo;
+}
+
+
+/* ########## MAIN ########## */
+
+
+
+main{
+    width: 100%;
+    margin: 8rem 0;
+}
+
+.conteiner_main{
+    background-color: #fff;
+    width: 70%;
+    margin: auto;
+    padding: 6rem;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75); 
+}
+
+.title_main{
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.title_main h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.description{
+    margin-top: 4rem;
+}
+.title{
+    font-size: 2rem;
+    font-weight: inherit;
+    font-style: italic;
+    margin: 4rem 0 1rem 0;
+}
+
+ul{
+    margin: 2rem 0 0 3rem;
+}
+
+p{
+    text-align: justify;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+

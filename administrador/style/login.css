@@ -1,0 +1,179 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 400px;
+    width: 800px;
+}
+
+
+.login{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 800px;
+    margin: auto;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+}
+
+/* formato logo virrey */
+.imgVirrey{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    padding: 10px 30px;
+    background-color: #f0cd8e;
+    align-items: center;
+}
+
+.imgVirrey img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* formato formulario de login */
+.login-form{
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    padding: 10px 30px 10px 20px;
+    background-color: #fff;
+}
+
+h3{
+    text-align: center;
+    color: var(--brow-color);
+    margin-bottom: 5px;
+}
+
+label{
+    color: #000;
+    display: block;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.txtb{
+    margin-top: 10px;
+}
+
+.txtb input{
+    width: 95%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #331803;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: justify;
+    display: block;
+}
+
+
+.txtb .invalid{
+    color: red;
+    font-size: 12px;
+    font-style: oblique;
+}
+
+.txtb .valid{
+    color: green;
+    font-size: 12px;
+    font-style: oblique;
+}
+
+form .ingreso{
+    width: 60%;
+    height: 40px;
+    margin: 20px auto;
+    padding-left: 10px;
+    border: 1px solid #331803;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    background-color: #331803;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.ingreso:hover{
+    background-color: #900C3F;
+    font-weight: bold;
+}
+
+.registrate{
+    font-size: 15px;
+    color: #f0cd8e;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.registrate a{
+    text-decoration: none;
+    color: var(--red-color);
+}
+
+.registrate a:hover{
+    color: var(--red-black);
+    font-weight: bold;
+}
+
+
+
+/* Pantalla recuperar contraseña */
+
+.btnRecuperar{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btnRecuperar button{
+    width: 200px;
+    background-color: rgb(97, 27, 27);
+}
+
+.btnRecuperar button:hover{
+	cursor:pointer;
+    background: rgb(182, 0, 0);
+}
+
+
+/* Pantalla cambiar contraseña */
+
+.conteinerCambiar{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#btnCambiar{
+    background-color: rgb(97, 27, 27);
+}
+
+#btnCambiar:hover{
+    background: rgb(182, 0, 0);
+}
+
