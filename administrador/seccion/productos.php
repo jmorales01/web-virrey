@@ -112,12 +112,12 @@ switch ($accion) {
         }
 
         // Redireccionar a productos para que se limpie los inputs
-        header("Location:productos.php");
+        //header("Location:productos.php");
 
         break;
 
     case 'cancelar':
-        header("Location:productos.php");
+        //header("Location:productos.php");
         break;
 
     case 'select':
@@ -160,7 +160,7 @@ switch ($accion) {
         $sentenciaSQL->execute();
 
         // Redireccionar a productos para que se limpie los inputs
-        header("Location:productos.php");
+        //header("Location:productos.php");
 
         break;
 }
@@ -238,74 +238,65 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-        <div class="col-md-12 tableDatos">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table id="example" class="table table-bordered  display nowrap" cellspacing="0" width="100%">
+                        <thead>
+                            <tr class="table-warning">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Estock</th>
+                                <th>Precio</th>
+                                <th>Descuento</th>
+                                <th>imagen</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($listaLibros as $libro) { ?>
+                                <tr>
+                                    <td><?php echo $libro['idLibro']; ?></td>
+                                    <td><?php echo $libro['nombre']; ?></td>
+                                    <td><?php echo $libro['stock']; ?></td>
+                                    <td><?php echo $libro['precio']; ?></td>
+                                    <td><?php echo $libro['descuento']; ?></td>
+                                    <td>
+                                        <img src="../../img-libros/<?php echo $libro['imagen']; ?>" width="50px" alt="">
+                                    </td>
 
-            <div class="row tableDatosSearch">
-                <div class="col-md-4">
-                    <label for="">Buscar po ID :</label>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-                <div class="col-md-4">
-                    <label for="">Buscar po Nombre :</label>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-                <div class="col-md-4">
-                    <label for="">Buscar po Precio :</label>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                                    <!-- botones de borrar y seleccionarr -->
+                                    <td>
+                                        <form method="POST">
+                                            <input type="hidden" name="txtID" id="txtID" value="<?php echo $libro['idLibro']; ?>">
+                                            <input type="submit" name="accion" value="select" class="btn btn-primary">
+                                            <input type="submit" name="accion" value="delete" class="btn btn-danger">
+                                        </form>
+                                    </td>
+
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                        <tfoot>
+                            <tr class="table">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Estock</th>
+                                <th>Precio</th>
+                                <th>Descuento</th>
+                                <th>imagen</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+
                 </div>
             </div>
-
-            <table id="example" class="table table-striped" style="width:100%">
-                <thead>
-                    <tr class="table-warning">
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Estock</th>
-                        <th>Precio</th>
-                        <th>Descuento</th>
-                        <th>imagen</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <?php foreach ($listaLibros as $libro) { ?>
-                        <tr>
-                            <td><?php echo $libro['idLibro']; ?></td>
-                            <td><?php echo $libro['nombre']; ?></td>
-                            <td><?php echo $libro['stock']; ?></td>
-                            <td><?php echo $libro['precio']; ?></td>
-                            <td><?php echo $libro['descuento']; ?></td>
-                            <td>
-                                <img src="../../img-libros/<?php echo $libro['imagen']; ?>" width="50px" alt="">
-                            </td>
-
-                            <!-- botones de borrar y seleccionarr -->
-                            <td>
-                                <form method="POST">
-                                    <input type="hidden" name="txtID" id="txtID" value="<?php echo $libro['idLibro']; ?>">
-                                    <input type="submit" name="accion" value="select" class="btn btn-primary">
-                                    <input type="submit" name="accion" value="delete" class="btn btn-danger">
-                                </form>
-                            </td>
-
-                        </tr>
-                    <?php } ?>
-
-                </tbody>
-            </table>
         </div>
 
     </div>
+
+</div>
 </div>
 
 
@@ -315,12 +306,27 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 <link rel="stylesheet" href="../style/productos.css">
 <script src="../../script/productos.js" type="module"></script>
 
-<!-- link a la database con jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!--   Datatables-->
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
+<!-- extension responsive -->
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
 
+
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable({
+            responsive: true
+        });
+    });
+</script>
 
 <!-- footer de la pagina -->
 <?php include("../template/footerAdmin.php"); ?>

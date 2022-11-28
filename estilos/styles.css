@@ -1,7 +1,5 @@
-
-
 /* VARIABLES DEFINIDAS CON LOS RECURSOS */
-:root{
+:root {
     --primary-color: #F4F6F8;
     --secundary-color: #efe6dd;
     --orange-color: #F89C37;
@@ -11,16 +9,18 @@
     --nombre-variable: atributo;
 }
 
+main{
+    background-color: var(--primary-color);
+}
 
-
-.fondo{
+.fondo {
     position: relative;
     width: 100%;
     height: 50vh;
-    
+
 }
 
-.fondo img{
+.fondo img {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -33,65 +33,65 @@
  * title and body
  */
 
- .title-explorador{
+.title-explorador {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
- }
+}
 
- .title-explorador p{
+.title-explorador p {
     font-size: 30px;
-    font-family: helvetica,arial,sans-serif;
+    font-family: helvetica, arial, sans-serif;
 
- }
+}
 
- /* Display de los iconos de explorar*/
+/* Display de los iconos de explorar*/
 
- .explorador{
+.explorador {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
- }
 
- .explorador-slider{
+}
+
+.explorador-slider {
     width: 11%;
     height: 120px;
     margin: 5px;
     background-color: #ffff;
     border-radius: 10px;
- }
+}
 
- .explorador-slider:hover{
+.explorador-slider:hover {
     background-color: rgb(245, 232, 212);
- }
+}
 
- .explorador-slider a{
+.explorador-slider a {
     text-decoration: none;
- }
+}
 
- .conteiner-img{
+.conteiner-img {
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
 
- .conteiner-img img{
+.conteiner-img img {
     width: 70%;
     height: 100%;
- }
+}
 
- .container-desc{
+.container-desc {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
 
-.content{
+.content {
     font-size: 17px;
     color: #000;
 }
@@ -102,37 +102,40 @@
  * cada dos carosel hay una lanima de descuento
  */
 
- .titulo_carusel{
+.titulo_carusel {
     width: 100%;
 }
 
-.titulo_carusel h3{
+.titulo_carusel h3 {
     width: 100%;
     font-size: 2.5rem;
     padding: 30px 80px 2px 80px;
 }
 
-.titulo_carusel p{
+.titulo_carusel p {
     margin: 0px 70px;
     height: 2px;
     background-color: #331803;
 }
 
- h4, h2,small,a{
+h4,
+h2,
+small,
+a {
     margin: 0;
     padding: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.Carousel{
+.Carousel {
     width: 100%;
     margin: 50px 0px;
 }
 
-.Carousel h2{
+.Carousel h2 {
     font-size: 26px;
     line-height: 38px;
     padding-bottom: 24px;
@@ -142,7 +145,7 @@ a{
     text-align: center;
 }
 
-.slick-list{
+.slick-list {
     position: relative;
     display: flex;
     align-items: center;
@@ -153,7 +156,7 @@ a{
     overflow: hidden;
 }
 
-.slick-track{
+.slick-track {
     position: relative;
     top: 0;
     left: 0;
@@ -162,7 +165,7 @@ a{
     transition: .5s ease-in-out;
 }
 
-.slick{
+.slick {
     position: relative;
     width: 200px;
     margin: 0px 10px;
@@ -177,49 +180,50 @@ a{
 }
 
 /* images */
-.slick a img{
+.slick a img {
     object-fit: cover;
     height: 240px;
     width: 100%;
     border-radius: 4px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
     transition: .3s ease-in-out;
 }
-.slick a img:hover{
+
+.slick a img:hover {
     opacity: .85;
 }
 
 /* informacion del libro */
-.info_libro{
+.info_libro {
     width: 100%;
     height: 100px;
 }
 
-.info_libro_autor{
+.info_libro_autor {
     font-size: 12px;
     height: 10px;
     white-space: nowrap;
     opacity: 50%;
 }
 
-.info-libro_titulo{
+.info-libro_titulo {
     font-size: 15px;
     color: #000;
 }
 
-.info_libro_precio{
+.info_libro_precio {
     text-align: center;
     margin: 10px 0px;
     color: #000;
 }
 
-.info_libro_precio span{
+.info_libro_precio span {
     font-size: 18px;
 }
 
 /* buttons */
 
-.slick-arrow{
+.slick-arrow {
     border-radius: 30px;
     background-color: #fff;
     position: absolute;
@@ -227,25 +231,28 @@ a{
     width: 48px;
     height: 48px;
     text-align: center;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
     border: 0;
     cursor: pointer;
 }
-.slick-arrow:focus{
+
+.slick-arrow:focus {
     outline: 0;
 }
-.slick-arrow svg{
+
+.slick-arrow svg {
     width: 12px;
     height: 100%;
-    color: rgba(0,0,0,.7);
-}
-.slick-prev{
-    left: 0px;
-}
-.slick-next{
-    right: 0px;
+    color: rgba(0, 0, 0, .7);
 }
 
+.slick-prev {
+    left: 0px;
+}
+
+.slick-next {
+    right: 0px;
+}
 
 
 

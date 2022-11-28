@@ -11,9 +11,6 @@
 }
 
 
-
-
-
 /* ########### MAIN ########### */
 main{
     margin: 8rem 0;
@@ -45,7 +42,8 @@ main{
 }
 
 .descripcion_local p{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    margin: 0;
 }
 
 .descripcion_local h3{
