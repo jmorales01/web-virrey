@@ -1,7 +1,7 @@
 <?php
 
 // Recepcionando y validando el formulario
-$txtID = 1001; //(int)(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
+$txtID = 1002; //(int)(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
 //$txtNombre = (isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
 
 
@@ -36,7 +36,12 @@ $listaTop5 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 
 <!-- header de la pagina -->
-<?php include("../template/header.php"); ?>
+<?php 
+
+$ruta = "../images/";
+include("../template/header.php"); 
+
+?>
 
 
 

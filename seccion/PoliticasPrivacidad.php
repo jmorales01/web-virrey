@@ -1,7 +1,12 @@
 
 
 <!-- header de la pagina -->
-<?php include("../template/header.php"); ?>
+<?php 
+
+$ruta = "../images/";
+include("../template/header.php"); 
+
+?>
 
 
 

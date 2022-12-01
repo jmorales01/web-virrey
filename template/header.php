@@ -7,6 +7,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . "/projectLibrary"
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,7 +84,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . "/projectLibrary"
         }
 
         .espacio{
-            height: 15rem;
+            height: 11rem;
             width: 100%;
         }
 
@@ -326,7 +327,7 @@ $url = "http://" . $_SERVER['HTTP_HOST'] . "/projectLibrary"
                 <ul class="ul">
                     <li class="icon">
                         <a href="<?php echo $url ?>">
-                            <img src="../images/logo1.png" alt="">
+                            <img src="<?php echo $ruta."logo1.png" ?>" alt="">
                         </a>
                     </li>
                     <li class="search">

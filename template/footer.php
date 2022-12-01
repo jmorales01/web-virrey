@@ -3,7 +3,7 @@
         <div class="col">
             <div class="images_logo">
                 <a href="<?php echo $url ?>">
-                    <img src="../images/logo1.png" alt="">
+                    <img src="<?php echo $ruta."logo1.png"?>" alt="">
                 </a>
             </div>
         </div>

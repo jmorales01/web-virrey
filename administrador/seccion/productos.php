@@ -25,7 +25,7 @@ $txtImagen = (isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'
 $accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 // Incluir la conexion a la base de datos
-include("../config/bd.php");
+include("../../config/db.php");
 
 
 
@@ -33,7 +33,7 @@ include("../config/bd.php");
 switch ($accion) {
     case 'agregar':
 
-        $sentenciaSQL = $conexion->prepare("INSERT INTO libro(nombre, categoria, idAutor, idEditorial, stock, precio, descuento, idDescripcion, imagen) 
+        $sentenciaSQL = $conexion->prepare("INSERT INTO libro(nombreLibro, categoriaLibro, idAutor, idEditorial, stockLibro, precioLibro, descuentoLibro, idDescripcion, imagenLibro) 
         VALUES 
         (:nombre, :categoria :autor,:editorial,:stock,:precio,:descuento,:descripcion,:imagen);");
 
@@ -257,12 +257,12 @@ $listaLibros = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                             <?php foreach ($listaLibros as $libro) { ?>
                                 <tr>
                                     <td><?php echo $libro['idLibro']; ?></td>
-                                    <td><?php echo $libro['nombre']; ?></td>
-                                    <td><?php echo $libro['stock']; ?></td>
-                                    <td><?php echo $libro['precio']; ?></td>
-                                    <td><?php echo $libro['descuento']; ?></td>
+                                    <td><?php echo $libro['nombreLibro']; ?></td>
+                                    <td><?php echo $libro['stockLibro']; ?></td>
+                                    <td><?php echo $libro['precioLibro']; ?></td>
+                                    <td><?php echo $libro['descuentoLibro']; ?></td>
                                     <td>
-                                        <img src="../../img-libros/<?php echo $libro['imagen']; ?>" width="50px" alt="">
+                                        <img src="../../img-libros/<?php echo $libro['imagenLibro']; ?>" width="50px" alt="">
                                     </td>
 
                                     <!-- botones de borrar y seleccionarr -->
