@@ -6,7 +6,7 @@ $txtID = 1002; //(int)(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
 
 
 // Incluir la conexion a la base de datos
-include("../administrador/config/bd.php");
+include("../config/bd.php");
 
 
 

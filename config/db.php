@@ -2,7 +2,7 @@
 
 // Variables para la conexion a la base de datos
 $host = "localhost";
-$bd = "libreria_virrey";
+$bd = "libreriaVirrey";
 $usuario = "root";
 $contrasenia = "";
 

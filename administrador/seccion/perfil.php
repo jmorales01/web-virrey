@@ -2,6 +2,20 @@
 <?php include("../template/headerAdmin.php"); ?>
 
 
+<?php
+
+$user = $_GET["user"];
+
+// Incluir la conexion a la base de datos
+include("../../config/db.php");
+
+// Seleccionar un libro
+$consultaSQL = $conexion->prepare("select * from usuario where idUsuario = :id");
+$consultaSQL->bindParam(':id', $user);
+$consultaSQL->execute();
+$usuarios = $consultaSQL->fetch(PDO::FETCH_LAZY);
+
+?>
 
 
 <div class="container">
@@ -23,55 +37,55 @@
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">DNI :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="72378112" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["dniUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Nombre :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="Jose Luis" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["nombreUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Apellido :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="Morales Vega" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["apellidoUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Direccion :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="Av. Jose carlos M. 723 - San Isiadro" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["direccionUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Correo :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="jmorales@elvirrey.com" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["correoUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Telefono :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["telefonoUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Celular :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="+51 983 345 843" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["celularUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Cargo :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="Gerente General" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["cargoUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="form-group">
                                                 <fieldset disabled="">
                                                     <label class="form-label" for="disabledInput">Fecha creacion :</label>
-                                                    <input class="form-control" id="disabledInput" type="text" value="07 nov 2022" disabled="">
+                                                    <input class="form-control" id="disabledInput" type="text" value="<?php echo $usuarios["fechaCreadoUsuario"] ?>" disabled="">
                                                 </fieldset>
                                             </div>
                                             <div class="btn-group" style="margin: auto;">
@@ -88,10 +102,10 @@
                             <div class="card text-white bg-secondary m-3">
                                 <h3 class="card-header">Datos</h3>
                                 <div class="card-body">
-                                    <h5 class="card-title">Gerente general</h5>
-                                    <h6 class="card-subtitle">Jose Luis Morales Vega</h6>
+                                    <h5 class="card-title"><?php echo $usuarios["cargoUsuario"] ?></h5>
+                                    <h6 class="card-subtitle"><?php echo $usuarios["nombreUsuario"]." ".$usuarios["apellidoUsuario"] ?></h6>
                                 </div>
-                                <img src="../../img-usuario/perfil.jpg" alt="">
+                                <img src="../../img-usuario/<?php echo $usuarios["imageUsuario"] ?>" alt="">
                                 <div class="card-body">
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui eligendi vel repellat ut dolore eius consequatur, sapiente, facere impedit consectetur, voluptates mollitia. Assumenda quidem velit voluptate natus non soluta maxime!</p>
                                 </div>
